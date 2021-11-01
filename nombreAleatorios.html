@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombres =["freddy","freddy1","freddy2","freddy3","freddy4","freddy5"];
+        var apellidos =["luna","luna1","luna2","luna3","luna4","luna5"];
+        var letras = ["a","b","c","d","e","f"];
+
+        for (let i =0; i< 1000;i++){
+            let humano = persona();
+            console.log(humano);
+        }
+
+        function persona(){
+            let nombre =nombres [numeroAlearorio(0,nombres.length-i)];
+            let apellido =apellidos [numeroAlearorio(0,apellidos.length-i)];
+            let edad =numeroAlearorio(1,21);
+            if (numeroAlearorio(0,1)==0){
+                var sexo = "hombre";
+            }else{
+                var sexo = "mujer";
+            }
+            let codigo= generarCodigo(6);
+            let persona={
+                nombre:nombre,
+                apellido:apellido,
+                edad:edad,
+                sexo:sexo,
+                codigo:codigo
+            }
+            return persona;
+        }
+        function numeroAlearorio(min,max){
+            return math.floor(math.randon()*(max-min+1))+min;
+        }
+        function generarCodigo(n){
+            let cadena = "";
+            for (var i =0;i<n;i++){
+                cadena=cadena+letras[numeroAlearorio(0,letras.length-1)];
+            }
+            return cadena;
+        }
+    </script>
+</body>
+</html>

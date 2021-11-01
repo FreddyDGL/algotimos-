@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var op = prompt("persiona (1) para registrar bandas     " + " persiona (2) registrar un album     " + "presiona (3) para ingresar cansiones");
+    var bandas = [];
+var inicio = prompt("¿Cuantas bandas desea ingresar?");
+for (var i = 1; i <=inicio; i++){
+    datos(i);
+
+}
+function datos(i){
+    let nombre = prompt("Ingresa el nombre de la banda");
+    let genero = prompt("Ingresa el genero de la banda");
+    let anio =prompt("Ingresa el año de la banda");
+    var banda =[];
+    var banda = {
+        nombre:nombre,
+        genero:genero,
+        anio:anio,
+        
+    }
+    bandas.push(banda);
+}
+function sumarGeneros(elementos){
+    let sumaHombres = 0;
+    let sumaMujeres = 0;
+
+    for(let i = 0; i < elementos.length; i++){        
+        if(elementos[i].sexo == "M"){
+            sumaHombres = sumaHombres +1;
+        }else{
+            sumaMujeres = sumaMujeres +1;
+        }
+    }
+
+    alert("Hombres: "+sumaHombres+" Mujeres: "+sumaMujeres);
+
+}
+
+    </script>
+</body>
+</html>

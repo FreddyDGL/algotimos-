@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+        var total = 0;
+        var n1,n2;
+        var op= prompt ("¿Que operacion decea hacer?");
+        n1 = parseInt (prompt ("ingresa un numero"));
+        n2 = parseInt (prompt ("ingresa otro numero "));
+        switch (op){
+            case "resta":
+                restarDosNumeros (n1,n2);
+            break; 
+            case "suma":
+                sumarDosNumeros(n1,n2);
+            break;
+            case "multiplicacion":
+                multiplicaDosNumeros (n1,n2);
+            break;
+            case "divicion":
+                console.log ("hola");
+                divideDosNumeros (n1,n2);
+            break;
+
+        }
+console.log("su respuesta es:", total);
+function restarDosNumeros (x1,x2){
+    total = n1 - n2 ;
+}
+function sumarDosNumeros (n1,n2){
+    total = n1 + n2 ;
+}
+function multiplicaDosNumeros (z1,z2){
+    total = n1 * n2 ;
+}
+function divideDosNumeros (n1,n2){
+    console.log ("hola ");
+    total = n1 / n2 ;
+}
+    </script>
+    
+</body>
+</html>

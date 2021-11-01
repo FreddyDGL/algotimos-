@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Definitivo</title>
+</head>
+
+<body>
+    <script>
+        const nCantidad = prompt("¿Cuantas bandas vas a registrar?");
+        for (let i = 0; i < nCantidad; i++) {//ciclo for co
+            var nombre = prompt("Nombre de la cancion");
+            var banda = prompt("De que banda es el album");
+            var genero = prompt("¿Que genero toca la banda?")
+            var año = prompt("En que año salio el album ");
+            var album = prompt("Nombre del album");
+            var duracion = prompt("Que duracion tiene la cancion");
+            var datosAmacenados = [];
+            var datos = {
+                nombre: nombre,
+                banda: banda,
+                genero: genero,
+                año: año,
+                album: album,
+                duracion: duracion
+            }
+            console.log(datos);
+        }
+        datosAmacenados.push(datos);//recopilacion de datos de caciones
+        alert("Presiona (1) para buscar banda por genero");
+        alert("Presiona (2) para buscar un album");
+        alert("Presiona (3) para buscar por nombre de la cancion ");
+        var menu = prompt("¿Qué desea hacer? (1),(2),(3)");//hacer case con esta variable 
+
+        switch (menu) {
+            case "1":
+                infoGenero();//para buscar banda por genero y album
+
+                break;
+            case "2":
+                infoAlbum();//para buscar un album
+
+                break;
+            case "3":
+                infoCancion();//para buscar cancion 
+
+                break;
+        }
+        function infoGenero() {
+            var busqueda = prompt("¿Que genero desea buscar?");
+            for (let i = 0; i < datosAmacenados.length; i++) {
+                if (datosAmacenados[i].genero == busqueda) {
+                    console.log(datosAmacenados[i]);
+                }
+            }
+            alert("gracias por usar este codigo :)");
+
+        }
+        function infoAlbum() {
+            var busqueda1 = prompt("¿Que album desea buscar?");
+            for (let i = 0; i < datosAmacenados.length; i++) {
+                if (datosAmacenados[i].album == busqueda1) {
+                    console.log(datosAmacenados[i]);
+                }
+            }
+            alert("gracias por usar este codigo :)");
+        }
+        function infoCancion() {
+            var busqueda2 = prompt("¿Que cancion desea buscar?");
+            for (let i = 0; i < datosAmacenados.length; i++) {
+                if (datosAmacenados[i].nombre == busqueda2) {
+                    console.log(datosAmacenados[i]);
+                }
+            }
+            alert("gracias por usar este codigo :)");
+        }
+    </script>
+
+</body>
+
+</html>
