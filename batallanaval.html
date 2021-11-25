@@ -26,10 +26,7 @@
             var casilla = prompt("jugador uno ingresa el numero de casilla donde quieres atacar ");
             if (array2[casilla] == 1) {
                 array2[casilla] = 2;
-                var puntosP1;
-                puntosP1 + 1;
                 console.log("has derribado un barco ");
-
             }
             else if (array2[casilla] == 0) {
                 array2[casilla] = 2;
@@ -38,19 +35,25 @@
             var casilla2 = prompt("jugador dos ingresa el numero de casilla donde quieres atacar ");
             if (Array[casilla2] == 1) {
                 Array[casilla2] = 2;
-                var puntosP2;
-                puntosP2 + 1;
                 console.log("has derribado un barco ");
             }
             else if (Array[casilla2] == 0) {
                 Array[casilla2] = 2;
                 console.log("no has derribado nada ");
-
             }
         }
-
         console.log(Array);
         console.log(array2);
+        var puntosP1 = Array[0] + Array[1] + Array[2] + Array[3] + Array[4] + Array[5];
+        var puntosP2 = array2[0] + array2[1] + array2[2] + array2[3] + array2[4] + array2[5];
+        console.log("el puntaje de el jugador 1 es " + puntosP1);
+        console.log("el puntaje de el jugador 2 es " + puntosP2);
+        if (puntosP1 < puntosP2) {
+            console.log("el ganador es el jugador 2 con " + puntosP2 + "puntos");
+        }
+        else if (puntosP1 > puntosP2) {
+            console.log("el ganador es el jugador 1 con " + puntosP1 + " puntos");
+        }
     </script>
 
 </body>
