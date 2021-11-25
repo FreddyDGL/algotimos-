@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batalla naval</title>
+</head>
+
+<body>
+    <script>
+        var Array = [0, 0, 0, 0, 0, 0];
+        var array2 = [0, 0, 0, 0, 0, 0];
+        alert("jugador uno ingresa un numero del 0-5 dependiendo de donde acomodaras los barcos ");
+        for (let i = 1; i <= 3; i++) {
+            var player1 = prompt("ingresa el numero del barco  " + i);
+            Array[player1] = 1;
+        }
+        alert("jugador dos ingresa un numero del 0-5 dependiendo de donde acomodaras los barcos ");
+        for (let i = 1; i <= 3; i++) {
+            var player2 = prompt("ingresa el numero del barco   " + i);
+            array2[player2] = 1;
+        }
+        for (let i = 0; i < 5; i++) {
+            var casilla = prompt("jugador uno ingresa el numero de casilla donde quieres atacar ");
+            if (array2[casilla] == 1) {
+                array2[casilla] = 2;
+                var puntosP1;
+                puntosP1 + 1;
+                console.log("has derribado un barco ");
+
+            }
+            else if (array2[casilla] == 0) {
+                array2[casilla] = 2;
+                console.log("no has derribado nada ");
+            }
+            var casilla2 = prompt("jugador dos ingresa el numero de casilla donde quieres atacar ");
+            if (Array[casilla2] == 1) {
+                Array[casilla2] = 2;
+                var puntosP2;
+                puntosP2 + 1;
+                console.log("has derribado un barco ");
+            }
+            else if (Array[casilla2] == 0) {
+                Array[casilla2] = 2;
+                console.log("no has derribado nada ");
+
+            }
+        }
+
+        console.log(Array);
+        console.log(array2);
+    </script>
+
+</body>
+
+</html>
